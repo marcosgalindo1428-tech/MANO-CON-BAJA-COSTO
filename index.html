@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prótesis de Mano Mioeléctrica</title>
+    <style>
+        :root {
+            --primary: #0071e3;
+            --bg-dark: #0f172a;
+            --card-bg: #1e293b;
+            --text-light: #f8fafc;
+            --text-gray: #94a3b8;
+            --accent: #38bdf8;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #0284c7, #0d9488);
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 1.5rem;
+            border: 1px solid #334155;
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            color: var(--accent);
+            margin-bottom: 0.8rem;
+        }
+
+        ul {
+            list-style-type: square;
+            padding-left: 1.2rem;
+            color: var(--text-gray);
+        }
+
+        ul li {
+            margin-bottom: 0.4rem;
+        }
+
+        .status-badge {
+            display: inline-block;
+            background-color: #0369a1;
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin-top: 1rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-gray);
+            font-size: 0.9rem;
+            border-top: 1px solid #334155;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Prótesis de Mano Mioeléctrica</h1>
+        <p>Control biológico mediante señales EMG para la rehabilitación biomecánica</p>
+    </header>
+
+    <div class="container">
+        <h2>📌 Sobre el Proyecto</h2>
+        <p style="color: var(--text-gray); margin-top: 0.5rem;">
+            Diseño e implementación de una prótesis robótica funcional accionada por señales electromiográficas (EMG) capturadas de la musculatura del antebrazo.
+        </p>
+
+        <div class="grid">
+            <div class="card">
+                <h3>⚡ Control Mioeléctrico</h3>
+                <p>Captura y filtrado de señales musculares en tiempo real para interpretar la intención de movimiento del usuario.</p>
+            </div>
+
+            <div class="card">
+                <h3>🦾 Mecánica & Impresión 3D</h3>
+                <p>Estructura ligera impresas en 3D optimizada para agarres precisos y resistencia mecánica.</p>
+            </div>
+
+            <div class="card">
+                <h3>🧠 Procesamiento</h3>
+                <p>Microcontrolador encargado del procesamiento de señales, algoritmos de detección de umbral y control de servomotores.</p>
+            </div>
+        </div>
+
+        <h2 style="margin-top: 3rem;">🛠️ Componentes Principales</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Hardware</h3>
+                <ul>
+                    <li>Sensor EMG (MyoWare / EMG Muscle Sensor)</li>
+                    <li>Microcontrolador (Arduino / ESP32)</li>
+                    <li>Servomotores de alto torque (MG996R)</li>
+                    <li>Batería LiPo / Fuente de alimentación</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Software & Control</h3>
+                <ul>
+                    <li>Filtrado pasabandas y rectificación</li>
+                    <li>Mapeo PWM para servomotores</li>
+                    <li>Lógica de agarres (Pinch, Power Grip)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Proyecto desarrollado por <strong>marcosgalindo1428-tech</strong></p>
+        <p><a href="https://github.com/marcosgalindo1428-tech/Mano-mioelectrica" style="color: var(--accent);">Ver repositorio en GitHub</a></p>
+    </footer>
+
+</body>
+</html>
